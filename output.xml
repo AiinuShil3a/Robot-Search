@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-10-21T16:16:16.444214" rpa="false" schemaversion="5">
+<suite id="s1" name="test Search" source="D:\TestProjects\Tester-H2OProject\Test_search\test_Search.robot">
+<test id="s1-t1" name="TC2001 ค้นหาที่พักโดยค้นหาจากชื่อที่จังหวัด" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:16.694627" level="INFO">Opening browser 'Edge' to base url 'https://h2-o-project-two.vercel.app'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-21T16:16:16.694627" elapsed="2.281218"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-21T16:16:18.975845" elapsed="0.054106"/>
+</kw>
+<kw name="InputNameProvince" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NameSearch}</arg>
+<arg>2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.029951" elapsed="0.267813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.297764" level="INFO">Clicking element 'id=search-text'.</msg>
+<arg>${NameSearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.297764" elapsed="0.100971"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.398735" level="INFO">Typing text 'สุพรรณบุรี' into text field 'id=search-text'.</msg>
+<arg>${NameSearch}</arg>
+<arg>${InputSearchProvince}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.398735" elapsed="0.137345"/>
+</kw>
+<status status="PASS" start="2024-10-21T16:16:19.029951" elapsed="0.506129"/>
+</kw>
+<kw name="DefinePeople" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.536080" level="INFO">Clicking button 'id=people-buttonHomstay'.</msg>
+<arg>${People}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.536080" elapsed="0.086626"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.622706" level="INFO">Clicking button 'id=Increase[1]'.</msg>
+<arg>${Young}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.622706" elapsed="0.062160"/>
+</kw>
+<status status="PASS" start="2024-10-21T16:16:19.536080" elapsed="0.148786"/>
+</kw>
+<kw name="StartandEnd_Date" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.684866" level="INFO">Clicking button 'id=date-buttonHomstay'.</msg>
+<arg>${Date}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.684866" elapsed="0.090008"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.774874" level="INFO">Clicking button 'xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[26]'.</msg>
+<arg>${Date-Start}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.774874" elapsed="0.071183"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.849418" level="INFO">Clicking button 'xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[27]'.</msg>
+<arg>${Date-End}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.849418" elapsed="0.073972"/>
+</kw>
+<status status="PASS" start="2024-10-21T16:16:19.684866" elapsed="0.238524"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:19.923390" level="INFO">Clicking element 'id=search-Homestay'.</msg>
+<arg>${Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-21T16:16:19.923390" elapsed="0.112738"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${Province-HomeStay}</arg>
+<arg>${InputSearchProvince}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-10-21T16:16:20.036378" elapsed="0.471055"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:20.537615" level="INFO">Element 'xpath=//*[@id="detailCard-Homestay"]/div[3]/div/p' contains text 'สุพรรณบุรี'.</msg>
+<arg>${Province-HomeStay}</arg>
+<arg>${InputSearchProvince}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-21T16:16:20.507433" elapsed="0.030182"/>
+</kw>
+<kw name="Capture Screenshot" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-21T16:16:25.540338" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-21T16:16:20.539797" elapsed="5.000541"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-10-21T16:16:25.540338" level="INFO">${timestamp} = 1729502185</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-10-21T16:16:25.540338" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-21T16:16:25.540338" level="INFO">${screenshot_path} = D:\TestProjects\Tester-H2OProject\Test_search/screenshots/Search/screenshot_1729502185.png</msg>
+<var>${screenshot_path}</var>
+<arg>${SCREENSHOT_DIR}/screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-21T16:16:25.540338" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:16:25.790785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Search/screenshot_1729502185.png"&gt;&lt;img src="screenshots/Search/screenshot_1729502185.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${screenshot_path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-21T16:16:25.542854" elapsed="0.247931"/>
+</kw>
+<status status="PASS" start="2024-10-21T16:16:20.539797" elapsed="5.250988"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-21T16:16:25.790785" elapsed="2.215668"/>
+</kw>
+<tag>PassSearchProvince</tag>
+<status status="PASS" start="2024-10-21T16:16:16.694627" elapsed="11.311826"/>
+</test>
+<status status="PASS" start="2024-10-21T16:16:16.444214" elapsed="11.562239"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">PassSearchProvince</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="test Search">test Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
